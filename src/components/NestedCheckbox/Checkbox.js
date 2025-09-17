@@ -1,5 +1,5 @@
 import React, { useEffect, useRef } from "react";
-import { STATUS } from "../constants";
+import { STATUS } from "../../constants";
 
 const Checkbox = ({ id, label, status, handleChange }) => {
     const checkboxRef = useRef();

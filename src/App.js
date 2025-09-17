@@ -10,6 +10,10 @@ function App() {
       path: 'nestedCheckbox'
     },
     {
+      title: 'React Toasts',
+      path: 'reactToasts'
+    },
+    {
       title: 'Tabs',
       path: 'tabs'
     },
@@ -47,7 +51,7 @@ function App() {
             {
               questionsArr.map((question) => {
                 return (
-                  <Link to={question.path} state={{ questionTitle: question.title }}>
+                  <Link to={question.path} key={question.path}>
                     <div class="bg-white rounded-lg shadow-lg p-6 text-left cursor-pointer">
                       <h3 class="text-lg font-semibold mb-2 text-gray-900">{question.title}</h3>
                     </div>

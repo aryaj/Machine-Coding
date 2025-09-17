@@ -1,12 +1,9 @@
-import React, { useEffect, useRef, useState } from "react";
+import React, { useState } from "react";
 import { useLocation } from "react-router";
-import QuestionHeader from "./QuestionHeader";
-import { STATUS } from "../constants";
+import { STATUS } from "../../constants";
 import Checkbox from "./Checkbox";
 
 const NestedCheckbox = () => {
-    const location = useLocation();
-    const { questionTitle } = location.state || {};
 
     const RenderChild = ({ data, handleChange }) => {
         return (
@@ -198,7 +195,6 @@ const NestedCheckbox = () => {
 
     return (
         <div>
-            <QuestionHeader questionTitle={questionTitle} />
             <div className="max-w-md mx-auto p-4">
                 <RenderChild data={checkboxData} handleChange={handleChange} />
             </div>
